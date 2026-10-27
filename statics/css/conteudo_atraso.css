@@ -1,0 +1,369 @@
+/* Fundo geral */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #4a8ac9;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo, .header-logo2 {
+    height: 30px;
+    width: auto;
+    background: #004aad;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul { 
+    list-style: none;
+    display: flex;
+    gap: 28px; 
+    margin: 0;
+    padding: 0;
+}
+
+nav a { 
+    text-decoration: none; 
+    color: #000; 
+    font-weight: 500; 
+}
+
+nav a:hover { 
+    color: #004aad;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Quadro branco de progresso (lado esquerdo) */
+.quadro-progresso {
+    flex: 0 0 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.quadro-progresso h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.progresso-info {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 25px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progresso-preenchimento {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 12px;
+}
+
+.limpar-progresso {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.limpar-progresso:hover {
+    background: #d32f2f;
+}
+
+/* Lista de atividades no quadro */
+.lista-atividades {
+    margin-top: 15px;
+}
+
+.atividade-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.atividade-item:last-child {
+    border-bottom: none;
+}
+
+.atividade-cor {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.atividade-nome {
+    flex: 1;
+    font-size: 14px;
+}
+
+.atividade-status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.atividade-status.concluido {
+    background: #4CAF50;
+    color: white;
+}
+
+.atividade-status.pendente {
+    background: #ff9800;
+    color: white;
+}
+
+/* Grid de atividades (lado direito) */
+.grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Cards */
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 15px;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    min-height: 180px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card-text {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+    color: #333;
+}
+
+/* Container da imagem com fundo colorido */
+.card-image {
+    width: 190px;
+    height: 160px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.card img {
+    width: 92%; 
+    height: 85%; 
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Cores dos cartões */
+.red {
+    background: #ffc5c9; 
+}
+
+.red .card-image {
+    background: #ff004f; 
+}
+
+.orange {
+    background: #ffdbbe; 
+}
+
+.orange .card-image {
+    background: #ff5038;
+}
+
+.yellow {
+    background: #fff1b4; 
+}
+
+.yellow .card-image {
+    background: #febe16; 
+}
+
+.green {
+    background: #cdffe7;
+}
+
+.green .card-image {
+    background: #09d0a8; 
+}
+
+.blue {
+    background: #9adaff;
+}
+
+.blue .card-image {
+    background: #0b98bb;
+}
+
+.purple {
+    background: #efcdff; 
+}
+
+.purple .card-image {
+    background: #af68da; 
+}
+
+/* Links nos cards */
+.card-text a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Status das atividades */
+.status-atividade {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.concluido {
+    background: #4CAF50;
+    color: white;
+}
+
+.status-badge.pendente {
+    background: #ff9800;
+    color: white;
+}
+
+/* Indicador visual nos cards */
+.card.concluida::before {
+    content: "✓";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #4CAF50;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.card.concluida {
+    opacity: 0.9;
+    border: 2px solid #4CAF50;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .quadro-progresso {
+        flex: none;
+        width: 100%;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

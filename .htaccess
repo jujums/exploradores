@@ -1,0 +1,14 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+# Serve apenas arquivos físicos diretamente (CSS, JS, imagens, etc.)
+# Diretórios NÃO são servidos diretamente — passam pelo front controller
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Evita loop ao reescrever o próprio index.php
+RewriteRule ^index\.php$ - [L]
+
+# Tudo o mais passa pelo front controller
+RewriteRule ^ index.php [L]

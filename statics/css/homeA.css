@@ -1,0 +1,144 @@
+/* Reset básico */
+* { margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+ }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4a8ac9;
+  color: #000;
+}
+
+.top-bar {
+  background-color:#fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #d9d9d9;
+}
+.top-bar h1 { 
+ font-size: 20px; 
+}
+nav ul { 
+    list-style: none;
+    display: flex;
+    gap: 28px; 
+}
+nav a { 
+    text-decoration: none; 
+    color: #000; 
+    font-weight: 500; 
+}
+nav a:hover { 
+    color: #004aad;
+}
+
+/* Conteúdo principal */
+main {
+  background-color: #fff;
+  margin: 20px auto;
+  width: 1460px;    
+  height: 640px;
+  padding: 28px;
+}
+
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 18px;
+}
+.inicio .text{ 
+    flex: 1;
+    min-width: 320px;
+}
+
+.inicio h2 {
+    position: relative;
+    color: #0052cc;
+    font-size: 32px;
+    top: -140px;
+}
+
+.inicio p { 
+position: relative;
+    width: 650px;
+    line-height: 1.6;
+    font-size: 16px;
+    top: -90px;
+}
+
+.arco img {
+    position: relative;
+    width: 440px;
+    height: 380px;
+    top:-66px;
+    right: 30px;
+}
+
+hr { 
+  position: relative;
+    border: none; 
+    border-top: 1.5px solid #e2e2e2; 
+    margin: 28px 0; 
+    top: -125px;
+}
+
+.fim {
+  display: flex;
+  justify-content: center; 
+  align-items: stretch;
+  gap: 36px;
+  flex-wrap: wrap;        
+}
+
+.logos {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+  right: 330px;
+  bottom:95px;
+}
+
+.logos img {
+  width: 180px;
+  height: auto;
+  border-radius: 15px;
+  background: #004aad; 
+  padding: 10px;
+}
+
+/* Caixinhas da direita */
+.caixote-num{
+  background-color: #b2d0f2;
+  padding: 16px;
+  width: 230px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  left: 260px;
+  top: -110px;
+}
+.caixote-num h4{
+   margin: 6px 0 4px;
+ }
+
+.number {
+  width: 160px; 
+  height: 140px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 64px; 
+  font-weight:800; 
+  color: #004aad;
+  background-color: #fff;
+}

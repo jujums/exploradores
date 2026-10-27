@@ -1,0 +1,232 @@
+/* Estilos para o painel administrativo - inspirado no design dos alunos */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4a8ac9;
+    color: #000;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff !important;
+    border-bottom: 2px solid #d9d9d9;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    color: #004aad !important;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-text {
+    color: rgba(255, 255, 255, 0.75) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-school-logo {
+    height: 40px !important;
+    width: auto !important;
+    margin-left: 15px;
+}
+
+/* Sidebar */
+aside {
+    background-color: #fff;
+    border-right: 2px solid #d9d9d9;
+    min-height: 100vh;
+}
+
+.nav-pills .nav-link {
+    color: #000;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #b2d0f2;
+    color: #004aad;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #004aad !important;
+    color: #fff !important;
+}
+
+/* Conteúdo principal */
+main.container-fluid {
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.card {
+    border: none !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card-title {
+    color: #0052cc;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #004aad !important;
+    border-color: #004aad !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    background-color: #003399 !important;
+    border-color: #003399 !important;
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background-color: #ffb347 !important;
+    border-color: #ffb347 !important;
+    color: #000 !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-warning:hover {
+    background-color: #ff9900 !important;
+    border-color: #ff9900 !important;
+    transform: translateY(-1px);
+}
+
+/* Formulários */
+.form-control {
+    border-radius: 8px !important;
+    border: 2px solid #d9d9d9 !important;
+    padding: 10px 15px !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.form-control:focus {
+    border-color: #004aad !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 74, 173, 0.25) !important;
+}
+
+.form-label {
+    color: #004aad;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Tabelas */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.table thead th {
+    background-color: #b2d0f2 !important;
+    color: #004aad;
+    font-weight: 600;
+    border: none;
+    padding: 15px;
+}
+
+.table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 15px 20px !important;
+}
+
+.alert-warning {
+    background-color: #fff3cd !important;
+    color: #856404 !important;
+}
+
+.alert-success {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+}
+
+.alert-danger {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+}
+
+/* Loading e estados */
+.spinner-border {
+    color: #004aad !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main.container-fluid {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    aside {
+        min-height: auto;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+}

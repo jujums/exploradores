@@ -1,0 +1,149 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color:#4a8ac9;
+}
+
+/* Cabeçalho */
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #ddd;
+}
+
+header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul { 
+    list-style: none;
+    display: flex;
+    gap: 28px; 
+}
+nav a { 
+    text-decoration: none; 
+    color: #000; 
+    font-weight: 500; 
+}
+nav a:hover { 
+    color: #004aad;
+}
+
+/* Perfil */
+.perfil {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.perfil h3 {
+  color: #0b57d0;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.perfil-box {
+  display: flex;
+  align-items: center;
+}
+
+.perfil-box img {
+  width: 120px;
+  height: 135px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.dados p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+/* Configurações Gerais */
+.config-gerais {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.config-gerais h3 {
+  color: #0b57d0;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.opcoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.item img {
+  width: 84px;
+  height: 90px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+.item p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Links dos itens */
+.extras {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.extras:hover {
+  color: inherit;
+}
+
+/* Container das logos */
+.logos-container {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  background-color: #004aad;
+  border-radius: 6px;
+}

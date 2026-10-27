@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(178deg, #4a8ac9,#cfe1ff);
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    position:relative;
+}
+
+.arco{ 
+    max-width:100%; 
+    height:500px; 
+    margin-right:90px;
+    margin-bottom: 15px;
+}
+
+.sol {
+    position: absolute;
+    top: -64px;
+    left: -36px;
+    width: 335px;
+    height: 300px;
+    animation: brilho 3s ease-in-out infinite;
+}
+
+@keyframes brilho {
+    0%, 100% { filter: brightness(1); transform: scale(1); }
+    50%      { filter: brightness(1.3); transform: scale(1.05); }
+}
+
+.nuvem1{
+    display:flex;
+    position: absolute;
+    top:-68px;
+    left: 270px;
+    width: 330px;
+}
+.nuvem2{
+    display:flex;
+    position: absolute;
+    top: -45px;
+    left: 658px;
+    width: 370px;
+}
+.nuvem3{
+    display:flex;
+    position: absolute;
+    top: -75px;
+    right: 38px;
+    width: 358px;
+}
+
+@keyframes moverNuvem {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+.nuvem1, .nuvem2, .nuvem3 {
+    animation: moverNuvem 12s ease-in-out infinite;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 330px; 
+    margin-right:40px;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px; 
+    color: #070707; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+h2{
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3{
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.logar {
+    text-decoration: none;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px; 
+  background-color:#A1CDF4 ;
+  color: #282828; 
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #899fff;
+  box-shadow: 0 0 10px #bac7ff; 
+}

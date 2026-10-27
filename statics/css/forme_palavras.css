@@ -1,0 +1,93 @@
+/* === Forme Palavras ===================================================== */
+.page-forme-palavras .app-shell-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    --fp-primary: #FF6B6B;
+    --fp-secondary: #4ECDC4;
+    --fp-text: #2C3E50;
+}
+
+.page-forme-palavras h1 {
+    color: var(--fp-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page-forme-palavras #emoji-display {
+    font-size: 100px;
+    margin: 20px 0;
+    animation: fp-bounce 2s infinite;
+}
+
+@keyframes fp-bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40%  { transform: translateY(-20px); }
+    60%  { transform: translateY(-10px); }
+}
+
+.page-forme-palavras #word-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    min-height: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-forme-palavras .slot {
+    width: 50px;
+    height: 60px;
+    border-bottom: 6px solid var(--fp-secondary);
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.page-forme-palavras #letters-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.page-forme-palavras .letter-btn {
+    background-color: var(--fp-primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px #C44536;
+    transition: transform 0.1s, box-shadow 0.1s;
+    user-select: none;
+}
+
+.page-forme-palavras .letter-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 #C44536;
+}
+
+.page-forme-palavras .letter-btn:disabled {
+    background-color: #ccc;
+    box-shadow: 0 6px #999;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.page-forme-palavras #feedback-message {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2ECC71;
+    margin-top: 20px;
+    min-height: 40px;
+    text-align: center;
+}
